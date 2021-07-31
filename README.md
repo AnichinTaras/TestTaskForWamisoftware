@@ -9,6 +9,8 @@ demonstration:
 
 Task
 
+DONT FORGET TO CHANGE PATH IN Parser.java
+
 -   :computer: You only need to use **java 8, stream api, collections**
 -   :monocle_face: 
        1.  Using Parsing Logic, get information from **tag_read_start** when repeating tags, use the first occurrence.

@@ -1,6 +1,7 @@
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.ZoneId;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -54,6 +55,8 @@ public class Parser {
    * @param second
    */
   private static void groupDateById(Collection<Logs> firstFileLog,Collection<Logs> second) {
+    ZoneId shanghai = ZoneId.of ("Asia/Shanghai") ;
+    ZoneId vienna = ZoneId.of ("Europe/Vienna") ;
     System.out.println(" ID " + '\t' +  "      First Date  " + '\t' +  " Finish Date" + '\t' + "Difference");
     Stream <Collection <Logs>> firstFileLog1 = Stream.of(firstFileLog, second);
     firstFileLog1.flatMap (Collection::stream)
@@ -67,7 +70,9 @@ public class Parser {
           long b = Long.parseLong (list.get (0));
           long res = a - b;
           if (res < 5750) {
-            System.out.println (id + "=" + list + ( ", result: " + GFG.findDifference (list.get (0), list.get (1)) ));
+            System.out.println (id + "=" + "[" + list.get(0) + " " + shanghai.getRules () + " " +  shanghai.getId () +
+                "] [" + list.get (1) + " " + vienna.getRules () + " " + vienna.getId () + "]" +
+                (", result: " + GFG.findDifference (list.get (0), list.get (1))));
             System.out.print ("finish date minus start date = ");
             System.out.print (a - b);
             System.out.println ();

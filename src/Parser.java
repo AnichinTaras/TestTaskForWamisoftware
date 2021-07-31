@@ -19,7 +19,7 @@ public class Parser {
    * Also, the functionality of selection by the first entry into the file is implemented here.
    */
   public static void parseFirstFile() {
-    final String firstFile = "/Users/anichyntaras/Desktop/TarasParserTask/resourses/tag_read_start.log";
+    final String firstFile = "resourses/tag_read_start.log";
     try(Stream<String> stream = Files.lines(Paths.get(firstFile))) {
       final List<Logs> logs = findTagsAndTime(stream);
       secondFile(logs.stream ().collect(Collectors.toMap(Logs::getId, Function.identity (),(p, q) -> p)).values());
@@ -34,7 +34,7 @@ public class Parser {
    * @param firstFileLog
    */
   private static void secondFile (Collection<Logs> firstFileLog) {
-    final String secondFile = "/Users/anichyntaras/Desktop/TarasParserTask/resourses/tag_reads_finish.log";
+    final String secondFile = "resourses/tag_reads_finish.log";
     try (Stream<String> stream = Files.lines(Paths.get (secondFile))) {
       final List<Logs> logs = findTagsAndTime (stream);
       Collection<Logs> second = logs.stream().collect(Collectors.toMap(Logs::getId,Function.identity(),(p, q) -> q)).values();

@@ -3,7 +3,13 @@
 
 <img src="https://scontent.fiev25-1.fna.fbcdn.net/v/t1.6435-9/67293121_395225247780799_5567716558509178880_n.png?_nc_cat=106&ccb=1-3&_nc_sid=e3f864&_nc_ohc=azdGRlegDBgAX8x48Yg&_nc_ht=scontent.fiev25-1.fna&oh=1fa5faae445741b7a08c2d657587525d&oe=61291737" alt="Introduction Banner.." style="text-align: center; margin-bottom: 23px;" />
 
+demonstration:
+
+![Alt Text](https://github.com/AnichinTaras/TestTaskForWamisoftware/blob/master/resourses/demoTaskTaras.gif)
+
 Task
+
+DONT FORGET TO CHANGE PATH IN Parser.java
 
 -   :computer: You only need to use **java 8, stream api, collections**
 -   :monocle_face: 
